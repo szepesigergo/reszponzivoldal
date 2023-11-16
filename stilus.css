@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+
+body {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background-color: rgb(245, 239, 239);
+}
+
+main{
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "h"
+        "n"
+        "b"
+        "f";
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    background-color: rgb(87, 185, 185);
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+header, nav, article, footer, aside{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+.sec1{
+    display: grid;
+    border: 1px solid black;
+    width: 100%;
+}
+
+#hatter{
+    max-width: 90%;
+}
+
+.sec2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "e m h n"
+        "o ha he ny";
+}
+
+#kep1{
+    max-width: 40px;
+}
+
+div#elso{
+    grid-area: e;
+}
+
+div#masodik{
+    grid-area: m;
+}
+
+div#harmadik{
+    grid-area: h;
+}
+
+div#negyedik{
+    grid-area: n;
+}
+
+div#otodik{
+    grid-area: o;
+}
+
+div#hatodik{
+    grid-area: ha;
+}
+
+div#hetedik{
+    grid-area: he;
+}
+
+div#nyolcadik{
+    grid-area: ny;
+}
+
+@media only screen and (max-width: 450px) {
+    body, main {
+      width: 100%;
+    }
+    main {
+        font-size: 12px+3vw;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n" 
+        "a" 
+        "f";
+    }
+    nav ul {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    article{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "e"
+            "m"
+            "ha";
+        
+    }
+  }
